@@ -1,0 +1,23 @@
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        direct:
+          binder: rabbit
+          destination: p2p-topic
+          group: p2p-group
+          durableSubscription: true
+        broadcast:
+          binder: rabbit
+          destination: pubsub-topic
+          group: pubsub-group
+          durableSubscription: true
+
+  rabbitmq:
+    addresses: localhost
+    username: admin
+    password: admin
+
+server:
+  port: 18080
