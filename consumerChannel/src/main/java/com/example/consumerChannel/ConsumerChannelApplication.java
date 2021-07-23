@@ -15,6 +15,9 @@ public class ConsumerChannelApplication {
 		SpringApplication.run(ConsumerChannelApplication.class, args);
 	}
 
+	public void test(){
+		System.out.println("a");
+	}
 
 	@StreamListener(ConsumerChannel.DIRECT)
 	public void handleDirect(MyMessage message) {
